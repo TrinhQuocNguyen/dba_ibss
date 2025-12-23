@@ -1,0 +1,46 @@
+Interview_ID,Country,Interview_Date,Position,Industry,Age_Range,Age,Gender,Interview_Duration_Min,AI_Experience_Years,Also_In_Survey,Survey_Link_Key
+JP_QUAL_001,Japan,2023-03-05,Senior Leader,Manufacturing,35-44,44,Male,87,1,True,259714375bda8988
+JP_QUAL_002,Japan,2023-03-18,Senior Leader,Retail,45-54,50,Male,86,1,True,c434835bc29243a7
+JP_QUAL_003,Japan,2023-03-11,Mid-level Leader,Retail,55-64,55,Male,81,1,False,
+JP_QUAL_004,Japan,2023-05-16,Mid-level Leader,Manufacturing,35-44,35,Male,75,4,False,
+JP_QUAL_005,Japan,2023-05-20,Mid-level Leader,Technology,35-44,39,Female,77,5,False,
+JP_QUAL_006,Japan,2023-04-22,Senior Leader,Technology,35-44,39,Male,68,1,False,
+JP_QUAL_007,Japan,2023-03-01,Senior Leader,Manufacturing,45-54,53,Male,94,2,False,
+JP_QUAL_008,Japan,2023-05-11,Mid-level Leader,Retail,35-44,41,Male,66,1,False,
+JP_QUAL_009,Japan,2023-04-23,Mid-level Leader,Retail,55-64,60,Male,59,3,True,c984819fe442bf9c
+JP_QUAL_010,Japan,2023-04-26,Senior Leader,Manufacturing,45-54,48,Male,71,5,True,a2913a00288d527e
+JP_QUAL_011,Japan,2023-05-24,Senior Leader,Healthcare,45-54,48,Male,88,2,False,
+JP_QUAL_012,Japan,2023-05-21,Senior Leader,Finance,55-64,64,Male,92,1,False,
+JP_QUAL_013,Japan,2023-05-27,Mid-level Leader,Other,45-54,49,Male,69,4,True,934b191a2838d1a9
+JP_QUAL_014,Japan,2023-03-30,Mid-level Leader,Healthcare,45-54,46,Male,71,5,True,43da6f0620e25b82
+JP_QUAL_015,Japan,2023-03-29,Mid-level Leader,Manufacturing,35-44,38,Male,74,5,False,
+JP_QUAL_016,Japan,2023-04-03,Mid-level Leader,Manufacturing,45-54,54,Male,60,5,True,b915b5fc9e591e52
+JP_QUAL_017,Japan,2023-05-05,Mid-level Leader,Retail,45-54,47,Male,77,3,False,
+JP_QUAL_018,Japan,2023-03-16,Mid-level Leader,Other,45-54,49,Male,62,4,True,47de31da95c2f513
+JP_QUAL_019,Japan,2023-03-04,Mid-level Leader,Retail,55-64,58,Male,83,2,False,
+JP_QUAL_020,Japan,2023-04-30,Mid-level Leader,Finance,55-64,60,Male,82,2,False,
+JP_QUAL_021,Japan,2023-04-30,Senior Leader,Manufacturing,55-64,56,Male,66,2,False,
+JP_QUAL_022,Japan,2023-04-15,Senior Leader,Retail,35-44,36,Male,63,2,False,
+JP_QUAL_023,Japan,2023-04-16,Mid-level Leader,Retail,55-64,59,Male,71,2,False,
+VN_QUAL_001,Vietnam,2023-04-05,Mid-level Leader,Financial Services,30-39,35,Female,60,4,True,0b31b6f32354bb06
+VN_QUAL_002,Vietnam,2023-04-21,Mid-level Leader,Financial Services,30-39,29,Female,74,3,True,64bd5dbaf7dac15f
+VN_QUAL_003,Vietnam,2023-04-25,Mid-level Leader,Retail,50-59,51,Male,72,2,False,
+VN_QUAL_004,Vietnam,2023-03-14,Mid-level Leader,Manufacturing,50-59,56,Male,74,4,False,
+VN_QUAL_005,Vietnam,2023-03-18,Mid-level Leader,Financial Services,30-39,27,Male,85,2,True,0acddf937cbcb666
+VN_QUAL_006,Vietnam,2023-03-15,Mid-level Leader,Financial Services,40-49,40,Female,84,3,True,f0f8b74863f02146
+VN_QUAL_007,Vietnam,2023-03-28,Mid-level Leader,Retail,30-39,39,Male,89,4,False,
+VN_QUAL_008,Vietnam,2023-03-25,Mid-level Leader,Manufacturing,40-49,47,Female,76,1,True,8e673bb3b2dcdad1
+VN_QUAL_009,Vietnam,2023-05-23,Mid-level Leader,Healthcare,50-59,54,Male,77,3,False,
+VN_QUAL_010,Vietnam,2023-05-25,Mid-level Leader,Technology,30-39,31,Male,78,2,False,
+VN_QUAL_011,Vietnam,2023-04-10,Mid-level Leader,Financial Services,40-49,41,Female,64,2,True,edbd87d8d8778730
+VN_QUAL_012,Vietnam,2023-04-21,Senior Leader,Manufacturing,50-59,55,Male,72,2,False,
+VN_QUAL_013,Vietnam,2023-04-02,Senior Leader,Technology,50-59,50,Male,89,3,False,
+VN_QUAL_014,Vietnam,2023-05-01,Senior Leader,Finance,50-59,59,Female,82,3,False,
+VN_QUAL_015,Vietnam,2023-03-31,Mid-level Leader,Retail,30-39,37,Female,79,4,False,
+VN_QUAL_016,Vietnam,2023-05-14,Mid-level Leader,Manufacturing,30-39,33,Male,89,1,False,
+VN_QUAL_017,Vietnam,2023-05-05,Mid-level Leader,Healthcare,40-49,44,Male,71,1,False,
+VN_QUAL_018,Vietnam,2023-05-09,Mid-level Leader,Finance,50-59,55,Male,79,1,False,
+VN_QUAL_019,Vietnam,2023-03-12,Mid-level Leader,Financial Services,30-39,36,Male,74,1,True,d139b7f1f4c41f81
+VN_QUAL_020,Vietnam,2023-05-29,Mid-level Leader,Manufacturing,40-49,43,Male,63,1,False,
+VN_QUAL_021,Vietnam,2023-03-03,Mid-level Leader,Healthcare,30-39,30,Male,82,2,False,
+VN_QUAL_022,Vietnam,2023-04-13,Mid-level Leader,Finance,30-39,31,Male,64,1,False,

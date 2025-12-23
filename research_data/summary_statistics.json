@@ -1,0 +1,90 @@
+{
+  "quantitative_summary": {
+    "Japan": {
+      "n": 213,
+      "demographics": {
+        "mean_age": 44.413145539906104,
+        "sd_age": 8.196191934594884,
+        "pct_male": 79.34272300469483,
+        "mean_tenure": 8.955399061032864,
+        "sd_tenure": 5.510404520249994
+      },
+      "lrait_dimensions": {
+        "TC": {
+          "mean": 5.407907128400784,
+          "sd": 0.880056544921363
+        },
+        "CMC": {
+          "mean": 4.9546163716635645,
+          "sd": 0.8960932732609624
+        },
+        "EA": {
+          "mean": 5.468968458676769,
+          "sd": 0.8150927230002533
+        },
+        "ALO": {
+          "mean": 4.734858290786935,
+          "sd": 0.8764821388273557
+        }
+      },
+      "outcomes": {
+        "operational": 6.529624413145539,
+        "strategic": 6.32661971830986,
+        "learning": 6.739718309859155,
+        "overall": 6.615023474178404
+      }
+    },
+    "Vietnam": {
+      "n": 215,
+      "demographics": {
+        "mean_age": 39.16279069767442,
+        "sd_age": 7.232230019442045,
+        "pct_male": 64.18604651162791,
+        "mean_tenure": 6.5637209302325585,
+        "sd_tenure": 4.312910970939635
+      },
+      "lrait_dimensions": {
+        "TC": {
+          "mean": 4.918088125031405,
+          "sd": 0.8436174311546891
+        },
+        "CMC": {
+          "mean": 5.33077200723664,
+          "sd": 0.8863617973358979
+        },
+        "EA": {
+          "mean": 5.093876270084807,
+          "sd": 0.8577777632629614
+        },
+        "ALO": {
+          "mean": 5.470862577108144,
+          "sd": 0.8449832379331632
+        }
+      },
+      "outcomes": {
+        "operational": 6.683674418604652,
+        "strategic": 6.503906976744185,
+        "learning": 6.833348837209303,
+        "overall": 6.673116279069767
+      }
+    }
+  },
+  "qualitative_summary": {
+    "Japan": {
+      "n": 23,
+      "avg_duration_min": 74.8695652173913,
+      "in_both_phases": 8
+    },
+    "Vietnam": {
+      "n": 22,
+      "avg_duration_min": 76.22727272727273,
+      "in_both_phases": 7
+    }
+  },
+  "overlap_summary": {
+    "total_in_both_phases": 15,
+    "japan_overlap": 8,
+    "vietnam_overlap": 7,
+    "overlap_percentage": 33.33333333333333
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "JP_QUAL_001": {
+    "quant_id": "JP_QUANT_021",
+    "link_key": "259714375bda8988"
+  },
+  "JP_QUAL_002": {
+    "quant_id": "JP_QUANT_046",
+    "link_key": "c434835bc29243a7"
+  },
+  "JP_QUAL_009": {
+    "quant_id": "JP_QUANT_100",
+    "link_key": "c984819fe442bf9c"
+  },
+  "JP_QUAL_010": {
+    "quant_id": "JP_QUANT_116",
+    "link_key": "a2913a00288d527e"
+  },
+  "JP_QUAL_013": {
+    "quant_id": "JP_QUANT_120",
+    "link_key": "934b191a2838d1a9"
+  },
+  "JP_QUAL_014": {
+    "quant_id": "JP_QUANT_140",
+    "link_key": "43da6f0620e25b82"
+  },
+  "JP_QUAL_016": {
+    "quant_id": "JP_QUANT_147",
+    "link_key": "b915b5fc9e591e52"
+  },
+  "JP_QUAL_018": {
+    "quant_id": "JP_QUANT_182",
+    "link_key": "47de31da95c2f513"
+  },
+  "VN_QUAL_001": {
+    "quant_id": "VN_QUANT_011",
+    "link_key": "0b31b6f32354bb06"
+  },
+  "VN_QUAL_002": {
+    "quant_id": "VN_QUANT_059",
+    "link_key": "64bd5dbaf7dac15f"
+  },
+  "VN_QUAL_005": {
+    "quant_id": "VN_QUANT_074",
+    "link_key": "0acddf937cbcb666"
+  },
+  "VN_QUAL_006": {
+    "quant_id": "VN_QUANT_156",
+    "link_key": "f0f8b74863f02146"
+  },
+  "VN_QUAL_008": {
+    "quant_id": "VN_QUANT_159",
+    "link_key": "8e673bb3b2dcdad1"
+  },
+  "VN_QUAL_011": {
+    "quant_id": "VN_QUANT_176",
+    "link_key": "edbd87d8d8778730"
+  },
+  "VN_QUAL_019": {
+    "quant_id": "VN_QUANT_206",
+    "link_key": "d139b7f1f4c41f81"
+  }
+}

@@ -1,0 +1,31 @@
+================================================================================
+DEMOGRAPHIC MATCHING VERIFICATION REPORT
+================================================================================
+
+Total survey responses: 428
+Total interviews: 45
+Linked participants: 15
+
+================================================================================
+COMPLETE VERIFICATION TABLE
+================================================================================
+
+Qual ID         Quant ID          Age    Gender   Industry             Country    Match   
+--------------------------------------------------------------------------------
+JP_QUAL_001     JP_QUANT_021      ✓      ✓        ✓                    ✓          ✓       
+JP_QUAL_002     JP_QUANT_046      ✓      ✓        ✓                    ✓          ✓       
+JP_QUAL_009     JP_QUANT_100      ✓      ✓        ✓                    ✓          ✓       
+JP_QUAL_010     JP_QUANT_116      ✓      ✓        ✓                    ✓          ✓       
+JP_QUAL_013     JP_QUANT_120      ✓      ✓        ✓                    ✓          ✓       
+JP_QUAL_014     JP_QUANT_140      ✓      ✓        ✓                    ✓          ✓       
+JP_QUAL_016     JP_QUANT_147      ✓      ✓        ✓                    ✓          ✓       
+JP_QUAL_018     JP_QUANT_182      ✓      ✓        ✓                    ✓          ✓       
+VN_QUAL_001     VN_QUANT_011      ✓      ✓        ✓                    ✓          ✓       
+VN_QUAL_002     VN_QUANT_059      ✓      ✓        ✓                    ✓          ✓       
+VN_QUAL_005     VN_QUANT_074      ✓      ✓        ✓                    ✓          ✓       
+VN_QUAL_006     VN_QUANT_156      ✓      ✓        ✓                    ✓          ✓       
+VN_QUAL_008     VN_QUANT_159      ✓      ✓        ✓                    ✓          ✓       
+VN_QUAL_011     VN_QUANT_176      ✓      ✓        ✓                    ✓          ✓       
+VN_QUAL_019     VN_QUANT_206      ✓      ✓        ✓                    ✓          ✓       
+
+================================================================================

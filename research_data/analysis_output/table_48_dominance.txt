@@ -1,0 +1,10 @@
+Table 4.8: Dominance Analysis Results
+
+======================================================================
+Dimension                           General Dominance    Relative Importance
+----------------------------------------------------------------------
+Change Management Capability                     0.142           34.6%
+Technological Competence                         0.118           28.8%
+Adaptive Learning Orientation                    0.098           23.9%
+Ethical Awareness                                0.052           12.7%
+======================================================================
