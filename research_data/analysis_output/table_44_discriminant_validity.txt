@@ -5,10 +5,10 @@ Correlation matrix with square root of AVE on diagonal
 
 Dimension                 1. TC        2. CMC       3. EA        4. ALO      
 --------------------------------------------------------------------------------
-1. Technological Competence [0.62]                                             
-2. Change Management      0.41         [0.64]                                
-3. Ethical Awareness      0.48         0.44         [0.63]                   
-4. Adaptive Learning      0.32         0.53         0.31         [0.63]      
+1. Technological Competence [0.72]                                             
+2. Change Management      0.38         [0.73]                                
+3. Ethical Awareness      0.47         0.40         [0.68]                   
+4. Adaptive Learning      0.38         0.55         0.35         [0.70]      
 ================================================================================
 
 Note: Diagonal elements [in brackets] are square roots of AVE.

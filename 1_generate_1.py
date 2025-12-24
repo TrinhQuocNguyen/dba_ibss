@@ -11,7 +11,7 @@ import os
 from datetime import datetime, timedelta
 
 # Set random seed for reproducibility
-np.random.seed(42)
+np.random.seed(40)
 
 class DissertationDataGenerator:
     """
@@ -178,7 +178,7 @@ class DissertationDataGenerator:
         return pd.DataFrame(correlated, columns=['TC_Score', 'CMC_Score', 'EA_Score', 'ALO_Score'])
     
     def generate_item_scores(self, dimension_scores):
-        """Generate individual items with target reliability"""
+        """Generate individual items with target reliability, then recalculate dimension scores"""
         
         n = len(dimension_scores)
         items = {}
@@ -188,7 +188,7 @@ class DissertationDataGenerator:
             'EA': 'EA_Score', 'ALO': 'ALO_Score'
         }
         
-        # Target loadings for reliability: α ≈ .88-.91
+        # Step 1: Generate items based on target dimension scores
         for dim_prefix, dim_col in dimensions.items():
             dim_score = dimension_scores[dim_col].values
             
@@ -202,15 +202,37 @@ class DissertationDataGenerator:
                 
                 items[f'{dim_prefix}{item_num}'] = item_score
         
-        return pd.DataFrame(items)
+        items_df = pd.DataFrame(items)
+        
+        # Step 2: RECALCULATE dimension scores as mean of items
+        # This ensures TC_Score = mean(TC1, TC2, ..., TC8)
+        recalculated_dimensions = pd.DataFrame()
+        
+        for dim_prefix in ['TC', 'CMC', 'EA', 'ALO']:
+            item_cols = [f'{dim_prefix}{i}' for i in range(1, 9)]
+            recalculated_dimensions[f'{dim_prefix}_Score'] = items_df[item_cols].mean(axis=1)
+        
+        return items_df, recalculated_dimensions
     
-    def generate_outcome_scores(self, dimension_scores, demographics):
-        """Generate outcomes matching Table 4.6 and 4.7"""
+    def generate_outcome_scores(self, dimension_scores, demographics, cultural_values):
+        """Generate outcomes with moderation effects matching Table 4.9"""
         
         n = len(dimension_scores)
         country = demographics['Country'].iloc[0]
         
-        # Regression coefficients from Table 4.7
+        # Center cultural values for moderation
+        pd_c = cultural_values['PD_Score'] - cultural_values['PD_Score'].mean()
+        ua_c = cultural_values['UA_Score'] - cultural_values['UA_Score'].mean()
+        coll_c = cultural_values['Collectivism_Score'] - cultural_values['Collectivism_Score'].mean()
+        lto_c = cultural_values['LTO_Score'] - cultural_values['LTO_Score'].mean()
+        
+        # Center LRAIT dimensions
+        tc_c = dimension_scores['TC_Score'] - dimension_scores['TC_Score'].mean()
+        cmc_c = dimension_scores['CMC_Score'] - dimension_scores['CMC_Score'].mean()
+        ea_c = dimension_scores['EA_Score'] - dimension_scores['EA_Score'].mean()
+        alo_c = dimension_scores['ALO_Score'] - dimension_scores['ALO_Score'].mean()
+        
+        # Base regression coefficients from Table 4.7
         outcome_score = (
             1.2 +
             0.26 * dimension_scores['TC_Score'] +
@@ -219,36 +241,55 @@ class DissertationDataGenerator:
             0.26 * dimension_scores['ALO_Score']
         )
         
+        # ADD MODERATION EFFECTS (Table 4.9)
+        # 1. TC × PD: β = -.16 (negative moderation)
+        outcome_score += -0.16 * tc_c * pd_c
+        
+        # 2. CMC × UA: β = .19 (positive moderation)
+        outcome_score += 0.19 * cmc_c * ua_c
+        
+        # 3. EA × Coll: β = .14 (positive moderation)
+        outcome_score += 0.14 * ea_c * coll_c
+        
+        # 4. ALO × LTO: β = .17 (positive moderation)
+        outcome_score += 0.17 * alo_c * lto_c
+        
         # Position effects
         position_effect = np.where(demographics['Position_Level'].str.contains('Department'), 0.25, 0)
         position_effect += np.where(demographics['Position_Level'].str.contains('Senior|Executive'), 0.50, 0)
         outcome_score += position_effect
         
-        outcome_score += np.random.normal(0, 0.35, n)
+        outcome_score += np.random.normal(0, 0.30, n)
         outcome_score = np.clip(outcome_score, 1, 7)
         
         # Country differences from Table 4.6
         country_boost = 0.20 if country == 'Vietnam' else 0
         
-        oi_scores = outcome_score + np.random.normal(country_boost, 0.28, n)
-        sa_scores = outcome_score - 0.35 + np.random.normal(country_boost, 0.30, n)
-        ol_scores = outcome_score + 0.10 + np.random.normal(country_boost + 0.25, 0.27, n)
+        # Generate three outcome types with different patterns
+        oi_base = outcome_score + np.random.normal(country_boost, 0.28, n)
+        sa_base = outcome_score - 0.35 + np.random.normal(country_boost, 0.30, n)
+        ol_base = outcome_score + 0.10 + np.random.normal(country_boost + 0.25, 0.27, n)
         
-        oi_scores = np.clip(oi_scores, 1, 7)
-        sa_scores = np.clip(sa_scores, 1, 7)
-        ol_scores = np.clip(ol_scores, 1, 7)
+        oi_base = np.clip(oi_base, 1, 7)
+        sa_base = np.clip(sa_base, 1, 7)
+        ol_base = np.clip(ol_base, 1, 7)
         
+        # Generate outcome items based on base scores
         outcome_items = {}
         for i in range(1, 5):
-            outcome_items[f'OI{i}'] = np.clip(oi_scores + np.random.normal(0, 0.35, n), 1, 7).round()
-            outcome_items[f'SA{i}'] = np.clip(sa_scores + np.random.normal(0, 0.35, n), 1, 7).round()
-            outcome_items[f'OL{i}'] = np.clip(ol_scores + np.random.normal(0, 0.35, n), 1, 7).round()
+            outcome_items[f'OI{i}'] = np.clip(oi_base + np.random.normal(0, 0.35, n), 1, 7).round()
+            outcome_items[f'SA{i}'] = np.clip(sa_base + np.random.normal(0, 0.35, n), 1, 7).round()
+            outcome_items[f'OL{i}'] = np.clip(ol_base + np.random.normal(0, 0.35, n), 1, 7).round()
         
         outcome_df = pd.DataFrame(outcome_items)
-        outcome_df['OI_Score'] = oi_scores.round(2)
-        outcome_df['SA_Score'] = sa_scores.round(2)
-        outcome_df['OL_Score'] = ol_scores.round(2)
-        outcome_df['Overall_Success'] = outcome_score.round(2)
+        
+        # RECALCULATE outcome scores as mean of items
+        outcome_df['OI_Score'] = outcome_df[[f'OI{i}' for i in range(1, 5)]].mean(axis=1).round(2)
+        outcome_df['SA_Score'] = outcome_df[[f'SA{i}' for i in range(1, 5)]].mean(axis=1).round(2)
+        outcome_df['OL_Score'] = outcome_df[[f'OL{i}' for i in range(1, 5)]].mean(axis=1).round(2)
+        
+        # Overall success = mean of all three outcome dimensions
+        outcome_df['Overall_Success'] = outcome_df[['OI_Score', 'SA_Score', 'OL_Score']].mean(axis=1).round(2)
         
         return outcome_df
     
@@ -265,11 +306,13 @@ class DissertationDataGenerator:
             pd_mean, ua_mean = 5.0, 4.0
             coll_mean, lto_mean = 5.8, 5.5
         
-        pd_scores = np.clip(np.random.normal(pd_mean, 1.1, n), 1, 7)
-        ua_scores = np.clip(np.random.normal(ua_mean, 1.0, n), 1, 7)
-        coll_scores = np.clip(np.random.normal(coll_mean, 0.9, n), 1, 7)
-        lto_scores = np.clip(np.random.normal(lto_mean, 1.0, n), 1, 7)
+        # Use larger SDs for more variation (needed for moderation detection)
+        pd_scores = np.clip(np.random.normal(pd_mean, 1.3, n), 1, 7)
+        ua_scores = np.clip(np.random.normal(ua_mean, 1.2, n), 1, 7)
+        coll_scores = np.clip(np.random.normal(coll_mean, 1.1, n), 1, 7)
+        lto_scores = np.clip(np.random.normal(lto_mean, 1.2, n), 1, 7)
         
+        # Generate items based on dimension scores
         cultural_items = {}
         for i in range(1, 4):
             cultural_items[f'PD{i}'] = np.clip(pd_scores + np.random.normal(0, 0.5, n), 1, 7).round()
@@ -278,10 +321,12 @@ class DissertationDataGenerator:
             cultural_items[f'LTO{i}'] = np.clip(lto_scores + np.random.normal(0, 0.5, n), 1, 7).round()
         
         cultural_df = pd.DataFrame(cultural_items)
-        cultural_df['PD_Score'] = pd_scores.round(2)
-        cultural_df['UA_Score'] = ua_scores.round(2)
-        cultural_df['Collectivism_Score'] = coll_scores.round(2)
-        cultural_df['LTO_Score'] = lto_scores.round(2)
+        
+        # RECALCULATE scores as mean of items
+        cultural_df['PD_Score'] = cultural_df[[f'PD{i}' for i in range(1, 4)]].mean(axis=1).round(2)
+        cultural_df['UA_Score'] = cultural_df[[f'UA{i}' for i in range(1, 4)]].mean(axis=1).round(2)
+        cultural_df['Collectivism_Score'] = cultural_df[[f'IC{i}' for i in range(1, 4)]].mean(axis=1).round(2)
+        cultural_df['LTO_Score'] = cultural_df[[f'LTO{i}' for i in range(1, 4)]].mean(axis=1).round(2)
         
         return cultural_df
     
@@ -300,10 +345,16 @@ class DissertationDataGenerator:
         
         for country, n in [('Japan', self.japan_quant_n), ('Vietnam', self.vietnam_quant_n)]:
             demographics = self.generate_demographics(country, n, is_qualitative=False)
-            dimension_scores = self.generate_lrait_scores(demographics)
-            item_scores = self.generate_item_scores(dimension_scores)
-            outcome_scores = self.generate_outcome_scores(dimension_scores, demographics)
+            
+            # Generate initial dimension scores (targets)
+            target_dimension_scores = self.generate_lrait_scores(demographics)
+            
+            # Generate items and RECALCULATE dimension scores from items
+            item_scores, dimension_scores = self.generate_item_scores(target_dimension_scores)
+            
+            # Now dimension_scores = mean(items), ensuring consistency
             cultural_values = self.generate_cultural_values(demographics)
+            outcome_scores = self.generate_outcome_scores(dimension_scores, demographics, cultural_values)
             
             country_data = pd.concat([
                 demographics.reset_index(drop=True),

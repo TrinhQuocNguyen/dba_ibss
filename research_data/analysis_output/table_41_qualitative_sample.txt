@@ -3,22 +3,21 @@ Table 4.1: Qualitative Sample Characteristics (FROM ACTUAL DATA)
 =========================================================================================================
 Characteristic                 Japan (n=23)              Vietnam (n=22)            Total (n=45)             
 ---------------------------------------------------------------------------------------------------------
-Average Age                    49.0 years                42.0 years                45.6 years
-Gender (% Male)                96%                     68%                     82%
+Average Age                    47.0 years                39.9 years                43.5 years
+Gender (% Male)                78%                     55%                     67%
 
 Position:
-  Senior Leader                39%                     14%                     27%
-  Mid-level Leader             61%                     86%                     73%
+  Senior Leader                52%                     41%                     47%
+  Mid-level Leader             48%                     59%                     53%
 
 Industry:
-  Finance                      2                       3                       5
-  Financial Services           0                       6                       6
-  Healthcare                   2                       3                       5
-  Manufacturing                7                       5                       12
-  Other                        2                       0                       2
-  Retail                       8                       3                       11
-  Technology                   2                       2                       4
+  Financial Services           8                       4                       12
+  Healthcare                   6                       1                       7
+  Manufacturing                6                       3                       9
+  Other                        1                       5                       6
+  Retail                       2                       4                       6
+  Technology                   0                       5                       5
 
-Average AI Experience          2.7 years                2.3 years                2.5 years
-Average Duration               75 minutes              76 minutes              76 minutes
+Average AI Experience          3.6 years                3.3 years                3.5 years
+Average Duration               78 minutes              68 minutes              73 minutes
 =========================================================================================================

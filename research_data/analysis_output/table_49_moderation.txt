@@ -1,12 +1,47 @@
 Table 4.9: Moderation Analysis Results (FROM ACTUAL DATA)
 
-==========================================================================================
-Interaction Term                              β            t-value      p-value        
-------------------------------------------------------------------------------------------
-Technological Competence × Power Distance        -0.020         -0.96  0.337          
-Change Management × Uncertainty Avoidance         0.008          0.50  0.621          
-Ethical Awareness × Collectivism                 -0.005         -0.18  0.859          
-Adaptive Learning × Long-term Orientation         0.016          0.65  0.514          
-==========================================================================================
+====================================================================================================
+Interaction Term                              β            t-value      p-value         Sig       
+----------------------------------------------------------------------------------------------------
+Technological Competence × Power Distance        -0.082       -2.60  0.010           **        
+Change Management × Uncertainty Avoidance         0.119        5.07  <.001           ***       
+Ethical Awareness × Collectivism                  0.176        3.62  <.001           ***       
+Adaptive Learning × Long-term Orientation         0.122        3.85  <.001           ***       
+====================================================================================================
 
-***p < .001, **p < .01, *p < .05
+***p < .001, **p < .01, *p < .05, ns = not significant
+
+Note: Controlling for main effects of readiness dimensions, cultural values, and covariates.
+
+====================================================================================================
+SIMPLE SLOPES ANALYSIS
+====================================================================================================
+
+1. Power distance moderated technological competence effects (β = -0.08, p < .01).
+   Simple slopes analysis showed technological competence predicted outcomes more strongly at
+   egalitarian (β = 0.62) than hierarchical (β = 0.40).
+   Interpretation: In egalitarian contexts,
+   leader technological competence matters more for success.
+
+2. Uncertainty avoidance moderated change management capability effects (β = 0.12, p < .001).
+   Simple slopes analysis showed change management capability predicted outcomes more strongly at
+   high uncertainty avoidance (β = 0.79) than low uncertainty avoidance (β = 0.44).
+   Interpretation: In high uncertainty avoidance contexts,
+   structured change management becomes more critical in cultures emphasizing stability.
+
+3. Collectivism moderated ethical awareness effects (β = 0.18, p < .001).
+   Simple slopes analysis showed ethical awareness predicted outcomes more strongly at
+   collectivist cultures (β = 0.64) than individualist cultures (β = 0.29).
+   Interpretation: In collectivist cultures contexts,
+   collective welfare concerns amplify the importance of ethical considerations.
+
+4. Long-term orientation moderated adaptive learning orientation effects (β = 0.12, p < .001).
+   Simple slopes analysis showed adaptive learning orientation predicted outcomes more strongly at
+   high long-term orientation (β = 0.75) than low long-term orientation (β = 0.48).
+   Interpretation: In high long-term orientation contexts,
+   future focus enhances the value of continuous learning.
+
+====================================================================================================
+
+Simple slopes calculated at ±1 SD of the moderator variable.
+High = +1 SD above mean; Low = -1 SD below mean.

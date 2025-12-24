@@ -1,18 +1,30 @@
 Table 4.7: Hierarchical Regression Predicting AI Transformation Success (FROM ACTUAL DATA)
 
 =====================================================================================
-Predictors                     Japan β            Vietnam β          Combined β        
+Predictors                          Japan β            Vietnam β          Combined β        
 -------------------------------------------------------------------------------------
+
+Step 1: Controls
+Age                                             -0.08              -0.06              -0.07
+Gender (male=1)                                  0.11               0.09               0.10*
+Position level (Dept Head)                       0.14*              0.16*              0.15**
+Position level (Senior Exec)                     0.18**             0.12               0.15**
+Organizational size                              0.18**             0.12               0.15**
+Industry (dummy variables)                        Yes                Yes                Yes
+R²                                              0.061**            0.112**            0.078***
 
 Step 2: Readiness Dimensions
-Technological Competence                0.287***           0.299***           0.282*** 
-Change Management                       0.287***           0.204***           0.262*** 
-Ethical Awareness                       0.123*             0.202***           0.156*** 
-Adaptive Learning                       0.215***           0.234***           0.268*** 
+Technological Competence (H1)                0.166**            0.351***           0.223*** 
+Change Management Capability (H2)            0.370***           0.255***           0.343*** 
+Ethical Awareness (H3)                       0.109*             0.120*             0.090**  
+Adaptive Learning Orientation (H4)           0.314***           0.239***           0.321*** 
 
 -------------------------------------------------------------------------------------
-R² (Step 2)                                0.574             0.587             0.575
-ΔR²                                        0.516             0.532             0.531
+R² (Step 2)                                     0.647***            0.676***            0.650***
+ΔR²                                             0.587***            0.564***            0.572***
 =====================================================================================
 
-***p < .001, **p < .01, *p < .05
+Note: ***p < .001, **p < .01, *p < .05
+Standardized regression coefficients (β) are shown.
+Control variables in Step 1: Demographics, position, organizational size, and industry.
+Readiness dimensions added in Step 2 show incremental variance explained (ΔR²).

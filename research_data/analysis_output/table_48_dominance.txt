@@ -3,10 +3,10 @@ Table 4.8: Dominance Analysis Results (FROM ACTUAL DATA)
 ===========================================================================
 Dimension                                Contribution to R² Relative %     
 ---------------------------------------------------------------------------
-Change Management Capability                        0.058           35.0%
-Technological Competence                            0.057           34.6%
-Adaptive Learning Orientation                       0.033           20.2%
-Ethical Awareness                                   0.017           10.2%
+Change Management Capability                        0.102           52.1%
+Adaptive Learning Orientation                       0.056           28.8%
+Technological Competence                            0.033           16.7%
+Ethical Awareness                                   0.005            2.3%
 ===========================================================================
 
-Total R² = 0.531
+Total R² = 0.595
