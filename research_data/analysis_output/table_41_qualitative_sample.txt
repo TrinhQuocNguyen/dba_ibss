@@ -1,0 +1,24 @@
+Table 4.1: Qualitative Sample Characteristics (FROM ACTUAL DATA)
+
+=========================================================================================================
+Characteristic                 Japan (n=23)              Vietnam (n=22)            Total (n=45)             
+---------------------------------------------------------------------------------------------------------
+Average Age                    49.0 years                42.0 years                45.6 years
+Gender (% Male)                96%                     68%                     82%
+
+Position:
+  Senior Leader                39%                     14%                     27%
+  Mid-level Leader             61%                     86%                     73%
+
+Industry:
+  Finance                      2                       3                       5
+  Financial Services           0                       6                       6
+  Healthcare                   2                       3                       5
+  Manufacturing                7                       5                       12
+  Other                        2                       0                       2
+  Retail                       8                       3                       11
+  Technology                   2                       2                       4
+
+Average AI Experience          2.7 years                2.3 years                2.5 years
+Average Duration               75 minutes              76 minutes              76 minutes
+=========================================================================================================

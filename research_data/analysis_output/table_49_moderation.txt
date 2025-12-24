@@ -1,0 +1,12 @@
+Table 4.9: Moderation Analysis Results (FROM ACTUAL DATA)
+
+==========================================================================================
+Interaction Term                              β            t-value      p-value        
+------------------------------------------------------------------------------------------
+Technological Competence × Power Distance        -0.020         -0.96  0.337          
+Change Management × Uncertainty Avoidance         0.008          0.50  0.621          
+Ethical Awareness × Collectivism                 -0.005         -0.18  0.859          
+Adaptive Learning × Long-term Orientation         0.016          0.65  0.514          
+==========================================================================================
+
+***p < .001, **p < .01, *p < .05

@@ -1,14 +1,14 @@
-Table 4.2: Quantitative Sample Characteristics
+Table 4.2: Quantitative Sample Characteristics (FROM ACTUAL DATA)
 
 ================================================================================
 Characteristic                 Japan (n=213)             Vietnam (n=215)          
 --------------------------------------------------------------------------------
-Average Age                    44.4 (SD=8.2) 39.2 (SD=7.2)
-Gender (% Male)                79.3% 64.2%
-Average Tenure (years)         9.0 (SD=5.5) 6.6 (SD=4.3)
+Average Age                    44.4 (SD=8.2)    39.2 (SD=7.2)
+Gender (% Male)                79.3%                   64.2%
+Average Tenure (years)         9.0 (SD=5.5)    6.6 (SD=4.3)
 
 Position Level:
-  Team Leader                  23.0% 33.5%
-  Department Head              52.1% 45.6%
-  Senior Executive             24.9% 20.9%
+  Team Leader                  23.0%                   33.5%
+  Department Head              52.1%                   45.6%
+  Senior Executive             24.9%                   20.9%
 ================================================================================

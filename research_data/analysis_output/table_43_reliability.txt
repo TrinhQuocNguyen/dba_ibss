@@ -1,12 +1,12 @@
-Table 4.3: Reliability Statistics
+Table 4.3: Reliability Statistics (FROM ACTUAL DATA)
 
-==========================================================================================
-Dimension            Cronbach α (Japan)   Cronbach α (Vietnam) Overall             
-------------------------------------------------------------------------------------------
-Technological Competence 0.832                  0.835                  0.834
-Change Management    0.851                  0.838                  0.848
-Ethical Awareness    0.835                  0.845                  0.841
-Adaptive Learning    0.827                  0.817                  0.837
-==========================================================================================
+==============================================================================================================
+Dimension                 Cronbach α (Japan)   Cronbach α (Vietnam) CR              AVE            
+--------------------------------------------------------------------------------------------------------------
+Technological Competence  0.83                   0.84                   0.83              0.38
+Change Management         0.85                   0.84                   0.85              0.41
+Ethical Awareness         0.84                   0.84                   0.84              0.40
+Adaptive Learning         0.83                   0.82                   0.84              0.39
+==============================================================================================================
 
-Note: All reliability coefficients exceed .85 threshold
+Note: Calculated from actual item responses

@@ -1,0 +1,15 @@
+Table 4.4: Discriminant Validity Assessment (FROM ACTUAL DATA)
+
+================================================================================
+Correlation matrix with square root of AVE on diagonal
+
+Dimension                 1. TC        2. CMC       3. EA        4. ALO      
+--------------------------------------------------------------------------------
+1. Technological Competence [0.62]                                             
+2. Change Management      0.41         [0.64]                                
+3. Ethical Awareness      0.48         0.44         [0.63]                   
+4. Adaptive Learning      0.32         0.53         0.31         [0.63]      
+================================================================================
+
+Note: Diagonal elements [in brackets] are square roots of AVE.
+Off-diagonal elements are correlations between constructs.
